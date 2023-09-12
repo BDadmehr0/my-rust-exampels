@@ -136,6 +136,17 @@ fn main() {
           println!("else {} ", number);
      }
 
+     let number = -2;
+    
+     if number < 0 {
+         // if outer condition evaluates to true evaluate the inner condition
+         if number == -2 {
+             println!("The current number is -2");
+         } else {
+             println!("The current number is {}", number);
+         }
+     }
+
      // 2 Methods print
      // println!("Hello World {}", name);
      print!("Hello World (without ln!) {}, {}", name, age);
