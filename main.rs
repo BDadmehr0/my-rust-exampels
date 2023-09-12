@@ -198,13 +198,32 @@ fn main() {
                // increase inner loop counter
                j += 1;
           }
-        
+          
           println!("");
-        
+
           // increase outer loop counter
           i += 1;
           if i == 6 {
+               // println!("\n");
                break;
           }
      }
+
+     //// Rust for Loop
+
+     // The for loop in Rust is used to iterate a range of numbers. The syntax of for loop is:
+     
+     // for variable in lower_bound_number..upper_bound_number {
+     //     // code block
+     // }
+
+     let mut sum = 0;
+    
+     // for loop to iterate over first 10 natural numbers
+     for i in 1..11 {
+          sum += i;
+          println!("Sum: {}  i : {}", sum, i);
+     }
+    
+
 }
