@@ -1,3 +1,5 @@
+// Dont Forget semicolon ";" :)
+
 // Comments
 /* 
 Hello World 
@@ -98,7 +100,7 @@ fn main() {
      let flag1: bool = true;
      let flag2: bool = false;
 
-     let number: i32 = 200; // i : integer type, 32: size of the data type (takes 32 bits of space memory)
+     let number: i32 = 0; // i : integer type, 32: size of the data type (takes 32 bits of space memory)
      let salary: i32 = -1;
      let mut age = 13;
      let salary = 342523.23;
@@ -127,24 +129,24 @@ fn main() {
      println!("character = {}", character);
      println!("integer = {}\n", integer);
 
-     // if & else
-     if number > 0 {
+     // if & else & elif(else if)
+     if number == 0 {
           println!("if {} is greater than 0", number);
-     } else if number == 0 {
+     } else if number > 0 {
           println!("elif {}", number);
      } else {
           println!("else {} ", number);
      }
 
      let number = -2;
-    
+
      if number < 0 {
-         // if outer condition evaluates to true evaluate the inner condition
-         if number == -2 {
-             println!("The current number is -2");
-         } else {
-             println!("The current number is {}", number);
-         }
+          // if outer condition evaluates to true evaluate the inner condition
+          if number == -2 {
+               println!("The current number is -2");
+          } else {
+               println!("The current number is {}", number);
+          }
      }
 
      // 2 Methods print
@@ -158,4 +160,18 @@ fn main() {
      /*
      '\n' new line ch
      */
+     
+
+     // Rust loop
+     let mut number1 = 0;
+     // infinite loop starts here
+     loop {
+          number1 += 1;
+          println!("Loop {}", number1);
+          
+          if number1 >= 10 {
+               // exit the loop
+               break;
+          }
+     }
 }
