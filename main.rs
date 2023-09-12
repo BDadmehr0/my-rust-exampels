@@ -1,5 +1,3 @@
-
-
 // Comments
 /* 
 Hello World 
@@ -108,7 +106,7 @@ fn main() {
      let name = "dadmehr";
      // char type
      let character: char = 'z';
-     
+
      // declare a float constant
      const PI: f32 = 3.14;
 
@@ -121,10 +119,18 @@ fn main() {
 
      println!("character = {}\n", character);
 
+     let character: char = 'B';
+
+     // convert char type to u8 integer type
+     let integer = character as u8;
+
+     println!("character = {}", character);
+     println!("integer = {}\n", integer);
+
      // if & else
      if number > 0 {
           println!("if {} is greater than 0", number);
-     } else if condition2 {
+     } else if number == 0 {
           println!("elif {}", number);
      } else {
           println!("else {} ", number);
