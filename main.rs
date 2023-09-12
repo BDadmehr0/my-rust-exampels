@@ -131,7 +131,7 @@ fn main() {
 
      // if & else & elif(else if)
      if number == 0 {
-          println!("if {} is greater than 0", number);
+          println!("if {} is greater than 0\n", number);
      } else if number > 0 {
           println!("elif {}", number);
      } else {
@@ -143,9 +143,9 @@ fn main() {
      if number < 0 {
           // if outer condition evaluates to true evaluate the inner condition
           if number == -2 {
-               println!("The current number is -2");
+               println!("The current number is -2\n");
           } else {
-               println!("The current number is {}", number);
+               println!("The current number is {}\n", number);
           }
      }
 
@@ -154,7 +154,7 @@ fn main() {
      print!("Hello World (without ln!) {}, {}", name, age);
      age = 14;
      // PI = 12; || error: aborting due to previous error
-     println!("\nName = {0}, Age = {1}", name, age);
+     println!("\nName = {0}, Age = {1}\n", name, age);
      // println!("Name = {name}, Age = {age}");
 
      /*
@@ -171,6 +171,39 @@ fn main() {
           
           if number1 >= 10 {
                // exit the loop
+               println!("\n");
+               break;
+          }
+     }
+
+     // Rust while Loop
+     // while condition {
+     //      // code block
+     // }
+      
+     // // code block outside while loop
+
+     // outer loop counter
+     let mut i = 1;
+    
+     // outer loop
+     while i <= 5 {
+          // inner loop counter
+          let mut j = 1;
+        
+          // inner loop
+          while j <= 5 {
+               print!("*");
+            
+               // increase inner loop counter
+               j += 1;
+          }
+        
+          println!("");
+        
+          // increase outer loop counter
+          i += 1;
+          if i == 6 {
                break;
           }
      }
