@@ -121,10 +121,13 @@ fn main() {
 
      println!("character = {}\n", character);
 
+     // if & else
      if number > 0 {
-          println!("{} is greater than 0", number);
+          println!("if {} is greater than 0", number);
+     } else if condition2 {
+          println!("elif {}", number);
      } else {
-          println!("{} ", number);
+          println!("else {} ", number);
      }
 
      // 2 Methods print
