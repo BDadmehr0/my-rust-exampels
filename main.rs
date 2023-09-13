@@ -187,26 +187,28 @@ fn main() {
      let mut i = 1;
     
      // outer loop
+     let mut i = 1;
+    
+     // start of outer loop
      while i <= 5 {
-          // inner loop counter
           let mut j = 1;
-        
-          // inner loop
+             
+          // start of inner loop
           while j <= 5 {
-               print!("*");
-            
-               // increase inner loop counter
-               j += 1;
+              j += 1;
+             
+              // condition to skip iteration of the inner loop
+              if j == 3 {
+                  // move to the next iteration of the inner loop
+                  continue;
+               }
+             
+              print!("*");
           }
-          
-          println!("");
 
-          // increase outer loop counter
+          println!("");
+         
           i += 1;
-          if i == 6 {
-               // println!("\n");
-               break;
-          }
      }
 
      //// Rust for Loop
@@ -225,5 +227,49 @@ fn main() {
           println!("Sum: {}  i : {}", sum, i);
      }
     
+     //// Rust Array
+     // array of natural numbers
+     // initialization of array without data type
+     let arr = [1, 2, 3, 4, 5];
 
+     // initialization of array with data type
+     let numbers: [i32; 5] = [1, 2, 3, 4, 5];
+     
+     // initialization of array with default values
+     let numbers: [i32; 5] = [3; 5];
+    
+     println!("\nArray of numbers = {:?}\n", numbers);
+
+     //// Access Elements of Rust Array
+     let colors = ["red", "green", "blue"];
+
+     /*      
+    colors[0] - access the element at index 0 (first element)
+    colors[1] - access the element at index 1 (second element)
+    colors[2] - access the element at index 2 (third element)
+    */
+     // accessing element at index 0
+     println!("1st Color: {}", colors[0]);
+
+     // accessing element at index 1
+     println!("2nd Color: {}", colors[1]);
+
+     // accessing element at index 2
+     println!("3rd Color: {}\n", colors[2]);
+
+     //// Mutable Array in Rust
+     // create a mutable array in rust
+     let mut numbers: [i32; 5] = [1, 2, 3, 4, 5];
+
+     // change the value of the 3rd element in the array
+     numbers[2] = 0;
+    
+     println!("changed array = {:?}\n", numbers);
+     
+     //// Looping Through an Array in Rust
+     
+     // loop through an array to print its index and value
+     for index in 0..3 {
+          println!("Index: {} -- Value: {}", index, colors[index]);
+     }
 }
