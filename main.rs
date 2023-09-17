@@ -257,19 +257,44 @@ fn main() {
      // accessing element at index 2
      println!("3rd Color: {}\n", colors[2]);
 
-     //// Mutable Array in Rust
-     // create a mutable array in rust
-     let mut numbers: [i32; 5] = [1, 2, 3, 4, 5];
+    //// Mutable Array in Rust
+    // create a mutable array in rust
+    let mut numbers: [i32; 5] = [1, 2, 3, 4, 5];
 
-     // change the value of the 3rd element in the array
-     numbers[2] = 0;
+    // change the value of the 3rd element in the array
+    numbers[2] = 0;
     
-     println!("changed array = {:?}\n", numbers);
+    println!("changed array = {:?}\n", numbers);
      
      //// Looping Through an Array in Rust
-     
-     // loop through an array to print its index and value
-     for index in 0..3 {
-          println!("Index: {} -- Value: {}", index, colors[index]);
-     }
+    // loop through an array to print its index and value
+    for index in 0..3 {
+        println!("Index: {} -- Value: {}", index, colors[index]);
+    }
+
+    //// Rust Slice
+    let arr = [1, 2, 3, 4, 5];
+    let slice = &arr[1..3];
+
+    println!("slice = {:?}", slice);
+    // &variable[start_index..end_index];
+    // reference the whole array
+    let s = &numbers[..];
+
+    //// mutable array
+    let mut colors = ["red", "green", "yellow", "white"];
+
+    println!("array = {:?}", colors);
+
+    // mutable slice
+    let sliced_colors = &mut colors[1..3];
+
+    println!("original slice = {:?}", sliced_colors);
+
+    // change the value of the original slice at the first index
+    sliced_colors[1] = "purple";
+
+    println!("changed slice = {:?}", sliced_colors);
+    
+
 }
