@@ -296,5 +296,21 @@ fn main() {
 
     println!("changed slice = {:?}", sliced_colors);
     
+    //// Rust Tuple
+    //A tuple in Rust allows us to store values of different data types. For example,
 
+    let tuple: (&str, f32, u8) = ("Hello", 3.14, 100);
+
+    // create a tuple with data type
+    let student_info: (&str, u8, f32) = ("Ricky", 21, 3.56);
+
+    println!("Tuple contents = {:?}", tuple);
+    // accessing tuple element at index 0
+    println!("Value at Index 0 = {}", random_tuple.0);
+    
+    // accessing tuple element at index 1
+    println!("Value at Index 1 = {}", random_tuple.1);
+    
+    // accessing tuple element at index 2
+    println!("Value at Index 2 = {}", random_tuple.2);
 }
